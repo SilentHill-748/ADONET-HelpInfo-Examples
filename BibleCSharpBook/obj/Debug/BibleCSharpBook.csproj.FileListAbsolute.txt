@@ -1,0 +1,7 @@
+D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\BibleCSharpBook\bin\Debug\BibleCSharpBook.exe.config
+D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\BibleCSharpBook\bin\Debug\BibleCSharpBook.exe
+D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\BibleCSharpBook\bin\Debug\BibleCSharpBook.pdb
+D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\BibleCSharpBook\obj\Debug\BibleCSharpBook.csproj.CoreCompileInputs.cache
+D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\BibleCSharpBook\obj\Debug\BibleCSharpBook.exe
+D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\BibleCSharpBook\obj\Debug\BibleCSharpBook.pdb
+D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\BibleCSharpBook\obj\Debug\BibleCSharpBook.csproj.AssemblyReference.cache
