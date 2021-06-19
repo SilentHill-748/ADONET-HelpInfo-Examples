@@ -37,3 +37,42 @@ D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\
 D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.genruntimeconfig.cache
 D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\ADONET.SQLite\bin\Debug\net5.0-windows\ADONET.SQLite.dll.config
 D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.Properties.Resources.resources
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\ADONET.SQLite.exe
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\ADONET.SQLite.dll.config
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\ADONET.SQLite.deps.json
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\ADONET.SQLite.runtimeconfig.json
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\ADONET.SQLite.runtimeconfig.dev.json
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\ADONET.SQLite.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\ref\ADONET.SQLite.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\ADONET.SQLite.pdb
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\Microsoft.Data.Sqlite.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\SQLitePCLRaw.batteries_v2.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\SQLitePCLRaw.nativelibrary.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\SQLitePCLRaw.core.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\bin\Debug\net5.0-windows\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.csproj.AssemblyReference.cache
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.Form1.resources
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.Properties.Resources.resources
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.csproj.GenerateResource.cache
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.AssemblyInfoInputs.cache
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.AssemblyInfo.cs
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.csproj.CoreCompileInputs.cache
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.csproj.CopyComplete
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ref\ADONET.SQLite.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.pdb
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.SQLite\obj\Debug\net5.0-windows\ADONET.SQLite.genruntimeconfig.cache

@@ -40,3 +40,45 @@ D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\
 D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.csproj.CopyComplete
 D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\ADONET.Unconnected\bin\Debug\net5.0-windows\System.Data.OleDb.dll
 D:\Кодинг\Проекты C# (VS Community)\Практика и уроки\BibleCSharpBook\ADONET.Unconnected\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Data.OleDb.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\ADONET.Unconnected.exe
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\ADONET.Unconnected.dll.config
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\ADONET.Unconnected.deps.json
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\ADONET.Unconnected.runtimeconfig.json
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\ADONET.Unconnected.runtimeconfig.dev.json
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\ADONET.Unconnected.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\ref\ADONET.Unconnected.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\ADONET.Unconnected.pdb
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\Azure.Core.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\Azure.Identity.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\System.Data.OleDb.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Data.OleDb.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.csproj.AssemblyReference.cache
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.Form1.resources
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.csproj.GenerateResource.cache
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.AssemblyInfoInputs.cache
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.AssemblyInfo.cs
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.csproj.CoreCompileInputs.cache
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.csproj.CopyComplete
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ref\ADONET.Unconnected.dll
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.pdb
+C:\Users\SilentHill\Documents\GitHub\ADONET-HelpInfo-Examples\ADONET.Unconnected\obj\Debug\net5.0-windows\ADONET.Unconnected.genruntimeconfig.cache

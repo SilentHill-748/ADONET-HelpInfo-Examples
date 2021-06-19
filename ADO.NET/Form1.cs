@@ -18,7 +18,8 @@ namespace ADONET.Connected
 
     public partial class Form1 : Form
     {
-        private readonly string connectionStr = ConfigurationManager.ConnectionStrings["sqlConnString"].ConnectionString;
+        private readonly string connectionStr = 
+            ConfigurationManager.ConnectionStrings["sqlConnString"].ConnectionString;
         private readonly string selectStudents = "SELECT * FROM StudentsView;";
 
         public Form1()
@@ -41,6 +42,7 @@ namespace ADONET.Connected
             SqlConnection.ClearAllPools();
         }
 
+        // Поднятие подключения
         private IDbConnection CreateConnection()
         {
             IDbConnection connection = new SqlConnection(connectionStr);
@@ -49,6 +51,7 @@ namespace ADONET.Connected
             return connection;
         }
 
+        // Выборка студентов из представления
         private void LoadStudents()
         {
             using (SqlConnection connect = new SqlConnection(connectionStr))
@@ -75,6 +78,7 @@ namespace ADONET.Connected
             }
         }
 
+        // Я тут игрался с базовой теорией выборки данных и с поднятием соединения.
         private async void OpenConnectionAsync()
         {
             using (SqlConnection connect = new SqlConnection(connectionStr))
@@ -93,6 +97,7 @@ namespace ADONET.Connected
             }
         }
 
+        // Создание тестовой БД через SqlCommand.
         private async void CreateDb_Click(object sender, EventArgs e)
         {
             string sql = "CREATE DATABASE Testdb;";
@@ -116,6 +121,7 @@ namespace ADONET.Connected
             }
         }
 
+        // Удаление БД.
         private async void DeleteDb_Click(object sender, EventArgs e)
         {
             string sql = "DROP DATABASE Testdb;";
@@ -138,6 +144,7 @@ namespace ADONET.Connected
             }
         }
 
+        // Практика работы с транзакциями.
         private async Task SendTransaction()
         {
             string sql = "USE University; INSERT INTO Students VALUES (11, 'Никита', 'Палин', 3, 2018, 2);";
@@ -171,6 +178,8 @@ namespace ADONET.Connected
             await SendTransaction();
         }
 
+        // Практика в изучении SqlDataReader. Пытался заполнить ListView по книге Флёнова.
+        // После переписал логику на вывод данных столбца в ComboBox.
         private async void SqlDataReaderTests()
         {
             using (var connect = new SqlConnection(connectionStr))
@@ -215,6 +224,7 @@ namespace ADONET.Connected
             }
         }
 
+        // Знакомство с первой небольшой ORM.
         private void DapperTests()
         {
             using (IDbConnection connection = new SqlConnection(connectionStr))
@@ -233,6 +243,7 @@ namespace ADONET.Connected
             }
         }
 
+        // Знакомство с классом SqlParameter.
         private void SqlParameters()
         {
             IDbConnection connect = CreateConnection();
@@ -265,6 +276,7 @@ namespace ADONET.Connected
             }
         }
 
+        // Практика по выводу данных из процедуры, используя выходной параметр.
         private void OutputSqlParameters()
         {
             IDbConnection connection = CreateConnection();
@@ -297,6 +309,7 @@ namespace ADONET.Connected
             }
         }
 
+        // Создание в коде процедуры.
         private bool ProcedureCreate()
         {
             string sqlExpression = "create procedure dbo.InsertStudent " +
@@ -320,6 +333,7 @@ namespace ADONET.Connected
             }
         }
 
+        // Вызов процедуры с кучей параметров в коде.
         private void ProcedureExecute()
         {
             string sql = "dbo.InsertStudent";
@@ -351,6 +365,7 @@ namespace ADONET.Connected
             }
         }
 
+        // Снова вызов процедуры с выходным значением.
         private void ExecuteProcedureWithOutParameter()
         {
             DbCommand command = new SqlCommand("GetStudentRoleByID", (SqlConnection)CreateConnection());
@@ -409,6 +424,7 @@ namespace ADONET.Connected
             connect.Close();
         }
 
+        // Вывод таблицы с файлами в грид.
         private void ShowFileInDatabase()
         {
             DataSet set = new DataSet();
@@ -422,6 +438,7 @@ namespace ADONET.Connected
             connection.Close();
         }
 
+        // Загрузка картинки по ID.
         private void LoadFileById(int i)
         {
             ShowFileInDatabase();
@@ -441,24 +458,25 @@ namespace ADONET.Connected
             connect.Close();
         }
 
+        // Практика работы с функциями
         private void ExecuteFunction(string funcName, int id)
         {
             var connect = (SqlConnection)CreateConnection();
             SqlCommand command = new SqlCommand(funcName, connect);
-            command.CommandType = CommandType.StoredProcedure;
+            command.CommandType = CommandType.StoredProcedure; // Функции также, как процедуры указываются в типе команды.
 
             SqlParameter outParam = new SqlParameter()
             {
                 ParameterName = "@picture",
                 SqlDbType = SqlDbType.VarBinary,
-                Direction = ParameterDirection.ReturnValue
+                Direction = ParameterDirection.ReturnValue // !!!
             };
             command.Parameters.Add(outParam);
             command.Parameters.AddWithValue("@id", id);
 
             try
             {
-                command.ExecuteNonQuery();
+                command.ExecuteNonQuery(); // Функция хоть и вернет всегда что-то, но вызывается она через NonQuary!
             }
             catch (SqlException sqlex)
             {
@@ -473,11 +491,13 @@ namespace ADONET.Connected
             }
         }
 
+        // Попытка вывести данные по названию таблицы, но в .NET нет такой возможности, которая описана в книге.
         private void LoadAllStudents2(string tableName)
         {
             var connect = (SqlConnection)CreateConnection();
             SqlCommand command = connect.CreateCommand();
             command.CommandText = tableName;
+
             // В .NET Framework тип комманды ниже не поддерживается для MSSQL Server.
             command.CommandType = CommandType.TableDirect;
 
@@ -489,6 +509,7 @@ namespace ADONET.Connected
             }
         }
 
+        // Уточнение. ExecuteReader имеет перегруженный вариант!
         private void TestExecuteReader()
         {
             var connect = (SqlConnection)CreateConnection();
@@ -498,7 +519,15 @@ namespace ADONET.Connected
 
             using (var reader = command.ExecuteReader(CommandBehavior.CloseConnection))
             {
-                
+                // Помимо CloseConnection есть ещё:
+                /*
+                 * SingleResult - Вывод только результат первой инструкции SQL (разделены через ";").
+                 * SingleRow - Вывод первой строки. -_-
+                 * SequentialAccess - Вывод строк с большими бинарными данными (см. описание)
+                 * SchemaOnly - данные по столбцам, без строк.
+                 * Default - вся таблица со всеми данными.
+                 * KeyInfo - Данные по столбцам и первичному ключу.
+                 */
             }
             errorLabel.Text = connect.State.ToString();
         }

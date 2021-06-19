@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Кодинг\\Проекты C# (VS Community)\\Практика и уроки\\BibleCSharpBook\\ADONET.Unconnected\\ADONET.Unconnected.csproj": {}
+    "C:\\Users\\SilentHill\\Documents\\GitHub\\ADONET-HelpInfo-Examples\\ADONET.Unconnected\\ADONET.Unconnected.csproj": {}
   },
   "projects": {
-    "D:\\Кодинг\\Проекты C# (VS Community)\\Практика и уроки\\BibleCSharpBook\\ADONET.Unconnected\\ADONET.Unconnected.csproj": {
+    "C:\\Users\\SilentHill\\Documents\\GitHub\\ADONET-HelpInfo-Examples\\ADONET.Unconnected\\ADONET.Unconnected.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Кодинг\\Проекты C# (VS Community)\\Практика и уроки\\BibleCSharpBook\\ADONET.Unconnected\\ADONET.Unconnected.csproj",
+        "projectUniqueName": "C:\\Users\\SilentHill\\Documents\\GitHub\\ADONET-HelpInfo-Examples\\ADONET.Unconnected\\ADONET.Unconnected.csproj",
         "projectName": "ADONET.Unconnected",
-        "projectPath": "D:\\Кодинг\\Проекты C# (VS Community)\\Практика и уроки\\BibleCSharpBook\\ADONET.Unconnected\\ADONET.Unconnected.csproj",
+        "projectPath": "C:\\Users\\SilentHill\\Documents\\GitHub\\ADONET-HelpInfo-Examples\\ADONET.Unconnected\\ADONET.Unconnected.csproj",
         "packagesPath": "C:\\Users\\SilentHill\\.nuget\\packages\\",
-        "outputPath": "D:\\Кодинг\\Проекты C# (VS Community)\\Практика и уроки\\BibleCSharpBook\\ADONET.Unconnected\\obj\\",
+        "outputPath": "C:\\Users\\SilentHill\\Documents\\GitHub\\ADONET-HelpInfo-Examples\\ADONET.Unconnected\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

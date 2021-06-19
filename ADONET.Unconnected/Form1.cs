@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
@@ -40,6 +34,7 @@ namespace ADONET.Unconnected
 
 
         //1
+        // Поднятие коннекшена.
         private async Task<IDbConnection> CreateConnectionAsync()
         {
             string connString = ConfigurationManager.ConnectionStrings["sqlString"].ConnectionString;
@@ -48,6 +43,7 @@ namespace ADONET.Unconnected
             return connection;
         }
 
+        // Запись данных в ОЗУ через SqlDataAdapter.
         private async void ReadData()
         {
             SqlConnection connect = (SqlConnection)await this.CreateConnectionAsync();
@@ -63,11 +59,14 @@ namespace ADONET.Unconnected
             dataTest.DataSource = _dataset.Tables[0];
 
             // Если уберешь строку, то вылетит ошибка в методе ниже.
-            _dataset.Tables[0].PrimaryKey = new DataColumn[] { _dataset.Tables[0].Columns[0] };
+            _dataset.Tables[0].PrimaryKey = 
+                new DataColumn[] { _dataset.Tables[0].Columns[0] };
 
+            // См. ниже.
             TestFindMethod();
         }
 
+        // Оформление инструкции обновления данных по исходным данным DataGridView.
         private async void Save_Click(object sender, EventArgs e)
         {
             using var connect = (SqlConnection)await this.CreateConnectionAsync();
@@ -123,6 +122,11 @@ namespace ADONET.Unconnected
             GC.Collect();
         }
 
+        // Работа над строками в таблице. У строк есть состояние редактирование и редактирование применяется только после
+        // метода AcceptChanges() указанной строки (или таблицы в целом, я полагаю).
+        // До принятия редактирования строки лишь помечены определенным маркером.
+        // Например, удаленная строка помечена как DataRowState.Deleted, но она всё ещё лежит в таблице до принятия.
+        // AcceptChanges() неявно вызывает метод EndEdit().
         private async void Read()
         {
             using var connection = (SqlConnection)await CreateConnectionAsync();
@@ -133,7 +137,7 @@ namespace ADONET.Unconnected
             await connection.CloseAsync();
 
             set.Tables[0].Rows[0].Delete();
-            set.Tables[0].Rows[0].AcceptChanges();
+            set.Tables[0].Rows[0].AcceptChanges(); // Строка будет удалена окончательно.
 
             foreach (DataColumn column in set.Tables[0].Columns)
             {
@@ -144,7 +148,7 @@ namespace ADONET.Unconnected
             {
                 row.BeginEdit();
                 row[1] = "Test";
-                row.EndEdit();
+                row.EndEdit(); // Также завершает редактирование и принимает изменения.
                 ListViewItem item = listView1.Items.Add(row.ItemArray[0].ToString());
                 for (var i = 1; i < row.ItemArray.Length; i++)
                 {
@@ -153,6 +157,7 @@ namespace ADONET.Unconnected
             }
         }
 
+        // Описание методов редактирования строк.
         private void MethodsOfDataRow()
         {
             DataRow row = _dataset.Tables[0].Rows[1];
@@ -167,6 +172,7 @@ namespace ADONET.Unconnected
 
 
         //2
+        // Обновление данных в БД 2 способом через SqlCommandBuilder и SqlDataAdapter.
         private async void DataAdapterUpdateVersion2()
         {
             SqlConnection connect = (SqlConnection)await CreateConnectionAsync();
@@ -198,6 +204,7 @@ namespace ADONET.Unconnected
 
 
         //3
+        // Создание таблицы кодом C#.
         private DataTable InitTable()
         {
             DataTable table = new ();
@@ -207,6 +214,7 @@ namespace ADONET.Unconnected
             table.Columns.Add("Количество", typeof(int));
             table.Columns.Add("Налог", typeof(decimal), "Цена * Количество * 0.18");
 
+            // Подписал таблицу на событие изменения строк (принятых).
             table.RowChanged += TestTable_RowChanged;
             return table;
         }
@@ -219,6 +227,7 @@ namespace ADONET.Unconnected
             MessageBox.Show(message);
         }
 
+        // Первый способ добавить строку в таблицу.
         private void AddValues(DataTable table, params object[] values)
         {
             DataRow row = table.NewRow();
@@ -226,6 +235,7 @@ namespace ADONET.Unconnected
             table.Rows.Add(row);
         }
 
+        // Второй способ.
         private void LoadTable_Click(object sender, EventArgs e)
         {
             DataTable table = InitTable();
@@ -235,7 +245,7 @@ namespace ADONET.Unconnected
             AddValues(table, 2, "Огурец", 7.83, 7);     // RowChanged|Add|Added
 
             object[] dataRow = {3, "Банан", 11.85, 7 };
-            // Чтобы через адаптер обновить БД, то вместо true надо указать false.
+            // Чтобы можно было через адаптер обновить БД, то вместо true надо указать false.
             table.LoadDataRow(dataRow, true);    // RowChanged|Add|Added
             EditTable(table);
         }
@@ -243,6 +253,7 @@ namespace ADONET.Unconnected
 
 
         //4
+        // Редактирование данных в DataSet с использованием выражения
         private async void AddColumnToFilledDataSet()
         {
             using SqlConnection connect = (SqlConnection)await CreateConnectionAsync();
@@ -251,13 +262,14 @@ namespace ADONET.Unconnected
             DataSet set = new ();
             adapter.Fill(set);
             set.Tables[0].Columns.Add("full name", 
-                typeof(string), "name + ' ' + surname");
+                typeof(string), "name + ' ' + surname"); // Столбец с выражением "name + surname".
             UniqueConstraint uc = new (set.Tables[0].Columns["id"]);
             set.Tables[0].Constraints.Add(uc);
 
             dataGridView2.DataSource = set.Tables[0];
         }
 
+        // Изменение таблицы и проверка статуса строк.
         private void EditTable(DataTable table)
         {
             // При изменении 1 строки, генерятся ивенты Column[Changed|Changing], Row[Cahnged|Changing].
@@ -266,8 +278,10 @@ namespace ADONET.Unconnected
 
             // Если надо для N строк провернуть такое, то лучше юзать BeginEdit/EndEdit
             // Но у класса DataTable нет таких методов. Возможно, они используются аналогично, но для грида.
+            // Не понятно на какой версии писал Флёнов...
         }
 
+        // Проверка работы методов поиска строк. Метод Find.
         private void TestFindMethod()
         {
             // У таблицы можно получить строку по индексу/значению первичного ключа.
@@ -283,10 +297,11 @@ namespace ADONET.Unconnected
             }
         }
 
+        // Удаление строк.
         private void TestDeleteRow()
         {
             DataTable table = InitTable();
-            table.RowChanged -= TestTable_RowChanged;
+            table.RowChanged -= TestTable_RowChanged; // Отписал событие, чтобы не мешало.
             table.Rows[0].Delete();     // Первый способ.
             table.Rows.RemoveAt(0);     // Второй способ.
 
@@ -295,6 +310,7 @@ namespace ADONET.Unconnected
         }
 
         //5
+        //Работа по настройке связей между таблицами в коде C#. Без SQL.
         DataSet set = new ();
         private async void TestRelationsOnProgram()
         {
@@ -318,6 +334,7 @@ namespace ADONET.Unconnected
             studentsGrid.DataSource = set.Tables[0];
         }
 
+        // Вывод информации по связям исходя из индекса выделенной строки в DataGridView.
         private void GetResultOfRelation_Click(object sender, EventArgs e)
         {
             // Отобраение полной картины связи студент-группа.
@@ -333,7 +350,6 @@ namespace ADONET.Unconnected
             // Вывод всех студентов, у которых указана выбранная группа.
             MessageBox.Show($"Студенты указанной группы:\n{students}");
         }
-
         private void GetGroupByStudent_Click(object sender, EventArgs e)
         {
             // Аналогично можно вытянуть инфу и родительской строки.
@@ -351,6 +367,7 @@ namespace ADONET.Unconnected
             MessageBox.Show(group);
         }
 
+        // Работа с отображением названия стобцов, которые имеют ограничение Unique или ForeignKey.
         private void ShowConstraintsCount_Click(object sender, EventArgs e)
         {
             UniqueConstraint uc = 
@@ -369,6 +386,7 @@ namespace ADONET.Unconnected
 
 
         //6
+        // Установка связности таблицы сама с собой.
         private async void FillTreeView()
         {
             // Связь можно делать и с 1 таблицей. Ссылка на саму себя.
@@ -383,9 +401,11 @@ namespace ADONET.Unconnected
             DataRelation relation = new (
                 "positions",
                 set.Tables[0].Columns[0],
-                set.Tables[0].Columns[1]);
+                set.Tables[0].Columns[1]); 
+            // Связал первое поле со вторым, так как второе ссылается на первое.
             set.Relations.Add(relation);
             
+            // Настройка правил обновления и удаления с каскадного на None.
             foreach (Constraint c in set.Tables[0].Constraints)
                 if (c is ForeignKeyConstraint fc)
                 {
@@ -393,6 +413,7 @@ namespace ADONET.Unconnected
                     fc.UpdateRule = Rule.None;
                 }
 
+            // Построение дерева по таблице с учётом связей.
             foreach (DataRow row in set.Tables[0].Rows)
             {
                 if (row.IsNull(1))
@@ -401,6 +422,7 @@ namespace ADONET.Unconnected
                     break;
             }
 
+            // Добавление поля с выводом числа подчиненных.
             set.Tables[0].Columns.Add(
                 "Число подчинённых", 
                 typeof(int), 
@@ -424,10 +446,11 @@ namespace ADONET.Unconnected
             e.Cancel = true;
         }
 
+        // Рекурсивное построение дерева в TreeView.
         private void AddTreenode(DataRow row, TreeNode node)
         {
             TreeNode currnode;
-            if (node == null)
+            if (node == null) // Если node = null - значит он корень.
                 currnode = treeView1.Nodes.Add(row.ItemArray[2].ToString());
             else
                 currnode = node.Nodes.Add(row.ItemArray[2].ToString());
@@ -439,6 +462,7 @@ namespace ADONET.Unconnected
 
 
         //7
+        // Применение фильтрации к таблице.
         private void GetStudentByFilter()
         { 
             string filter = $"positionname LIKE '{nameInput.Text}%'";
@@ -468,29 +492,37 @@ namespace ADONET.Unconnected
 
 
         //8
+        // практика работы с DataView.
         private DataTable testTable;
         private DataView testView;
 
         private async void CreateView()
         {
+            // DataView не копирует данные из DataTable. При настройке View все изменения автоматический применяются
+            // ко всем связанным с DataView объектам.
             testTable = await LoadTableAsync();
             testView = new DataView(testTable);
             dataGridView5.DataSource = testView;
-            SetSort("surname DESC");
             SetFilter("name LIKE 'Н%'");
             AddNewRowToView();
+        }
+
+        // Демонстрация эффективности DataView!
+        private void SortDataView_Click(object sender, EventArgs e)
+        {
+            SetSort("surname DESC");
             DataRowView[] rows = testView.FindRows("Палин");
             rows[0].Row[2] = "Отредачено!";
         }
 
         private void SetSort(string columnName)
         {
-            testView.Sort = columnName;
+            testView.Sort = columnName; // Сортировка моментально применяется к DataView и данные сортируются в гриде.
         }
 
         private void SetFilter(string filter)
         {
-            testView.RowFilter = filter;
+            testView.RowFilter = filter; // Аналогично, как в методе выше.
         }
 
         private async Task<DataTable> LoadTableAsync()
@@ -506,9 +538,10 @@ namespace ADONET.Unconnected
             return set.Tables[0];
         }
 
+        // Добавление записи в представление.
+        // Данный также добавляются и в связный DataTable!
         private void AddNewRowToView()
         {
-            object[] values = { 30, "Никита", "Палин", 1, 1 };
             DataRowView rowView = testView.AddNew();
             rowView["id"] = 30;
             rowView["name"] = "Никита";
@@ -519,6 +552,7 @@ namespace ADONET.Unconnected
         }
 
         //9
+        // Выгрузка данных схемы БД.
         private async void GetSchemaToDb()
         {
             using var connect = (SqlConnection)await CreateConnectionAsync();

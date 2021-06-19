@@ -25,13 +25,15 @@ namespace ADONET.SQLite
             InitializeComponent();
         }
 
+        // Установка соединения.
         private SqliteConnection CreateConnection()
         {
             SqliteConnection connection = new(_connectString);
             connection.Open();
             return connection;
         }
-
+        
+        // Выборка указанной таблицы из БД в виде объекта DataTable.
         private DataTable GetTable(string tablename)
         {
             string sql = $"SELECT * FROM {tablename}";
@@ -43,15 +45,18 @@ namespace ADONET.SQLite
             return GetTableFromReader(reader);
         }
 
+        // Преобразование данных из SqliteDataReader в объект DataTable.
         private DataTable GetTableFromReader(SqliteDataReader reader)
         {
             DataTable table = new();
             for (var i = 0; i < reader.FieldCount; i++)
             {
+                // Создание столбцов с указанием типа столбца в БД.
                 Type columnType = reader.GetFieldType(i);
                 table.Columns.Add(reader.GetName(i), columnType);
             }
 
+            // Чтение всех данных из ридера.
             while (reader.Read())
             {
                 if (reader.HasRows)
@@ -66,6 +71,7 @@ namespace ADONET.SQLite
             return table;
         }
 
+        // Создание таблицы стужентов.
         private void CreateStudentsTable()
         {
             string sql = @"
@@ -107,6 +113,7 @@ namespace ADONET.SQLite
             return list;
         }
 
+        // Выполнение синхронизации данных из приложения с БД.
         private void UpdateAddedRows()
         {
             List<DataRow> addedRowsFromGrid = GetAddedRows();
@@ -141,6 +148,7 @@ namespace ADONET.SQLite
             UpdateAddedRows();
         }
 
+        // Таблица с картинками
         private void CreateTableFiles()
         {
             string sql = @"
@@ -157,6 +165,7 @@ namespace ADONET.SQLite
             command.ExecuteNonQuery();
         }
 
+        // Работа над выгрузкой/загрузкой картинки.
         private void SavePicture_Click(object sender, EventArgs e)
         {
             CreateTableFiles();

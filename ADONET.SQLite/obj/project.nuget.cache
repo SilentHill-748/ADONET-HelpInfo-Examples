@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b1MLHJZlFeLBGoYioK4meeNkvJ7tNdGZjM2lL3Ucck9nVXTySJ0LEa01zE2mENhvTAyoTaJXN9Z61nlHJovmhA==",
+  "dgSpecHash": "as1wLjO//Tz+66tUBH+FlrHb0/kWZ+GSoenH6MT4bFdFlrJbe9ZCuH2bjyzfk4LF+WFhigtDgr72nMjPnbC4XQ==",
   "success": true,
-  "projectFilePath": "D:\\Кодинг\\Проекты C# (VS Community)\\Практика и уроки\\BibleCSharpBook\\ADONET.SQLite\\ADONET.SQLite.csproj",
+  "projectFilePath": "C:\\Users\\SilentHill\\Documents\\GitHub\\ADONET-HelpInfo-Examples\\ADONET.SQLite\\ADONET.SQLite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SilentHill\\.nuget\\packages\\microsoft.data.sqlite\\5.0.7\\microsoft.data.sqlite.5.0.7.nupkg.sha512",
     "C:\\Users\\SilentHill\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.7\\microsoft.data.sqlite.core.5.0.7.nupkg.sha512",

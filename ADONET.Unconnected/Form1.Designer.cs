@@ -58,6 +58,7 @@ namespace ADONET.Unconnected
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.sortBut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataTest)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -362,6 +363,7 @@ namespace ADONET.Unconnected
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.sortBut);
             this.tabPage8.Controls.Add(this.dataGridView5);
             this.tabPage8.Location = new System.Drawing.Point(4, 24);
             this.tabPage8.Name = "tabPage8";
@@ -375,10 +377,10 @@ namespace ADONET.Unconnected
             // 
             this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(8, 6);
+            this.dataGridView5.Location = new System.Drawing.Point(8, 63);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowTemplate.Height = 25;
-            this.dataGridView5.Size = new System.Drawing.Size(762, 467);
+            this.dataGridView5.Size = new System.Drawing.Size(762, 410);
             this.dataGridView5.TabIndex = 0;
             // 
             // tabPage9
@@ -402,6 +404,16 @@ namespace ADONET.Unconnected
             this.dataGridView6.RowTemplate.Height = 25;
             this.dataGridView6.Size = new System.Drawing.Size(767, 470);
             this.dataGridView6.TabIndex = 0;
+            // 
+            // sortBut
+            // 
+            this.sortBut.Location = new System.Drawing.Point(8, 34);
+            this.sortBut.Name = "sortBut";
+            this.sortBut.Size = new System.Drawing.Size(94, 23);
+            this.sortBut.TabIndex = 1;
+            this.sortBut.Text = "Сортировка";
+            this.sortBut.UseVisualStyleBackColor = true;
+            this.sortBut.Click += new System.EventHandler(this.SortDataView_Click);
             // 
             // Form1
             // 
@@ -467,6 +479,7 @@ namespace ADONET.Unconnected
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.Button sortBut;
     }
 }
 
